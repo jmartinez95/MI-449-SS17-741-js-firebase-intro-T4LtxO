@@ -40,9 +40,8 @@ function readWoofsInDatabase () {
 
 // UPDATE the woof in Firebase
 function updateWoofInDatabase (woofKey, woofText) {
-  firebase.database().ref('woofs').child(woofKey).set({
-    created_at: new Date().getTime(),
-    text: woofText
+  firebase.database().ref('woofs').child(woofKey).child('text').set({
+    woofText
   })
 }
 
