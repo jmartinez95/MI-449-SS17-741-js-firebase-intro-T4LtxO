@@ -76,7 +76,7 @@ function updateWoofRow (woofKey, woof) {
   var form = row.querySelector('input').parentElement
   var text = row.querySelector('.text')
   form.className = form.className.replace('show', 'hidden')
-  row.querySelector('.text').textContent = woof.text
+  row.querySelector('.text').textContent = woof
   text.className = text.className.replace('hidden', 'show')
 }
 
